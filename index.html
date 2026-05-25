@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julieta Rubis | AI & Healthcare Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 70px 10%;
+      background: linear-gradient(135deg, #111827, #1e3a8a, #4c1d95);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #dbeafe;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    nav {
+      background: #020617;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #93c5fd;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      border: 1px solid #334155;
+    }
+
+    .card h3 {
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin: 5px 5px 5px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Julieta Rubis</h1>
+  <p>AI/ML Engineer | Healthcare AI | LLMs | RAG | Python | Hugging Face | Digital Health</p>
+  <p style="margin-top: 20px;">Building practical AI solutions for healthcare, compliance, and intelligent systems.</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am an AI/ML graduate with experience in healthcare, digital health, LLM applications, RAG systems,
+      and AI-powered tools. My work focuses on practical AI solutions that support healthcare decision-making,
+      compliance, automation, and responsible AI use.
+    </p>
+    <p style="margin-top: 15px;">
+      I am especially interested in the intersection of Nursing, Healthcare AI, Agentic AI, and Digital Health innovation.
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Healthcare Symptom Assistant</h3>
+      <p>
+        AI-powered healthcare assistant built with Gradio and Hugging Face. It provides general health guidance,
+        symptom categories, emergency warning detection, and chat history.
+      </p>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Gradio</span>
+        <span class="tag">Hugging Face</span>
+        <span class="tag">Qwen LLM</span>
+      </div>
+      <a class="btn" href="https://huggingface.co/spaces/julietarubis/health-chatbot" target="_blank">View Demo</a>
+    </div>
+
+    <div class="card">
+      <h3>EU AI Act Compliance Chatbot</h3>
+      <p>
+        LLM-powered compliance chatbot using RAG to support AI Act-related document search and question answering.
+      </p>
+      <div>
+        <span class="tag">LangChain</span>
+        <span class="tag">FAISS</span>
+        <span class="tag">RAG</span>
+        <span class="tag">AWS</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Healthcare Bias Detection Dashboard</h3>
+      <p>
+        Dashboard for analysing healthcare model fairness metrics and supporting bias detection in AI systems.
+      </p>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Dash</span>
+        <span class="tag">Fairness AI</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>AI-Powered Anomaly Detection & Predictive Maintenance</h3>
+      <p>
+        MSc dissertation project using LSTM and Autoencoder models for industrial anomaly detection and predictive maintenance.
+      </p>
+      <div>
+        <span class="tag">LSTM</span>
+        <span class="tag">Autoencoder</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">Spark</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Automated Data Scraping Pipeline</h3>
+      <p>
+        Automated scraping solution using Selenium, BeautifulSoup, Scrapy, Flask backend, and MySQL storage.
+      </p>
+      <div>
+        <span class="tag">Selenium</span>
+        <span class="tag">BeautifulSoup</span>
+        <span class="tag">Scrapy</span>
+        <span class="tag">MySQL</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="card">
+    <span class="tag">Python</span>
+    <span class="tag">Machine Learning</span>
+    <span class="tag">Deep Learning</span>
+    <span class="tag">LLMs</span>
+    <span class="tag">RAG</span>
+    <span class="tag">LangChain</span>
+    <span class="tag">FAISS</span>
+    <span class="tag">Hugging Face</span>
+    <span class="tag">Gradio</span>
+    <span class="tag">Streamlit</span>
+    <span class="tag">Flask</span>
+    <span class="tag">AWS</span>
+    <span class="tag">Docker</span>
+    <span class="tag">SQL</span>
+    <span class="tag">Healthcare AI</span>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>AI/ML Developer Intern — Orcawise</h3>
+    <p><strong>Jun 2024 – Dec 2024 | Dublin, Ireland</strong></p>
+    <ul>
+      <li>Developed LLM-powered compliance chatbot using LangChain, FAISS, and AWS.</li>
+      <li>Worked on LLM optimization and AI compliance-related applications.</li>
+      <li>Contributed to healthcare bias detection and fairness evaluation systems.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Co-Founder & CTO — Techbottronix</h3>
+    <p><strong>Ireland</strong></p>
+    <ul>
+      <li>Built AI and web-based technology solutions.</li>
+      <li>Worked on healthcare AI, automation, and intelligent assistant concepts.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Healthcare Assistant</h3>
+    <p><strong>Ireland</strong></p>
+    <ul>
+      <li>Provided patient and resident care support in healthcare settings.</li>
+      <li>Developed strong interest in combining healthcare practice with AI innovation.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: <a style="color:#38bdf8" href="mailto:julietarubis@gmail.com">julietarubis@gmail.com</a></p>
+    <p>GitHub: <a style="color:#38bdf8" href="https://github.com/julietarubis" target="_blank">github.com/julietarubis</a></p>
+    <p>LinkedIn: <a style="color:#38bdf8" href="https://www.linkedin.com/in/julietarubis" target="_blank">linkedin.com/in/julietarubis</a></p>
+    <p>Hugging Face: <a style="color:#38bdf8" href="https://huggingface.co/julietarubis" target="_blank">huggingface.co/julietarubis</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Julieta Rubis | AI & Healthcare Portfolio</p>
+</footer>
+
+</body>
+</html>
