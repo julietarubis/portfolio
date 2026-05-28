@@ -4,296 +4,629 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julieta Rubis | AI & Healthcare Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Patrick+Hand&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --orange: #ff9100;
+      --orange-dark: #e67f00;
+      --ink: #111827;
+      --muted: #666;
+      --paper: #ffffff;
+      --soft: #f7f7f7;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
-    header {
-      padding: 70px 10%;
-      background: linear-gradient(135deg, #111827, #1e3a8a, #4c1d95);
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 520px;
+      background:
+        linear-gradient(rgba(255, 145, 0, 0.88), rgba(255, 145, 0, 0.88)),
+        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: #fff;
+      padding: 60px 20px;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .profile-photo {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #dbeafe;
-      max-width: 800px;
-      margin: auto;
+    .hero h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 56px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .hero .line {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 34px;
+      margin: 0 8px;
+    }
+
+    .hero p {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .socials a {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      color: var(--orange);
+      display: grid;
+      place-items: center;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      border-radius: 3px;
+      transition: 0.25s;
+    }
+
+    .socials a:hover {
+      transform: translateY(-4px);
+      background: #111827;
+      color: #fff;
     }
 
     nav {
-      background: #020617;
-      padding: 15px 10%;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 16px 8%;
       position: sticky;
       top: 0;
       z-index: 10;
-    }
-
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: var(--orange);
     }
 
     section {
-      padding: 60px 10%;
+      padding: 90px 8%;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 25px;
-      color: #93c5fd;
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      margin-bottom: 70px;
     }
 
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 18px;
-      margin-bottom: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      border: 1px solid #334155;
-    }
-
-    .card h3 {
-      color: #f8fafc;
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin: 5px 5px 5px 0;
-    }
-
-    .grid {
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: 240px 1fr;
+      gap: 70px;
+      max-width: 1100px;
+      margin: auto;
+      align-items: start;
     }
 
-    .btn {
+    .about-menu {
+      font-size: 12px;
+    }
+
+    .about-menu p {
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 12px;
+    }
+
+    .about-menu strong {
+      color: #111;
+    }
+
+    .about-content h3 {
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #ffd34d;
+      padding: 2px 5px;
+      color: #111;
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      color: #333;
+    }
+
+    .mini-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .mini-socials a {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: #1f2937;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 2px;
+    }
+
+    .orange-section {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .orange-section .section-title {
+      color: #fff;
+    }
+
+    .timeline-wrap {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+    }
+
+    .timeline-block {
+      position: relative;
+    }
+
+    .label {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 16px;
-      background: #38bdf8;
-      color: #020617;
-      border-radius: 10px;
-      text-decoration: none;
+      background: #fff;
+      color: #111;
+      padding: 5px 16px;
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 38px;
+    }
+
+    .timeline-item {
+      border-right: 2px solid rgba(255,255,255,0.8);
+      padding: 0 34px 36px 0;
+      text-align: right;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .timeline-block:nth-child(2) .timeline-item {
+      border-right: none;
+      border-left: 2px solid rgba(255,255,255,0.8);
+      text-align: left;
+      padding: 0 0 36px 34px;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(255,255,255,0.25);
+    }
+
+    .timeline-block:nth-child(2) .timeline-item::after {
+      left: -10px;
+      right: auto;
+    }
+
+    .timeline-item h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .timeline-item p {
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .work {
+      max-width: 420px;
+      margin: 70px auto 0;
+    }
+
+    .skills-section {
+      background: #fff;
+    }
+
+    .circle-skills {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 35px;
+      margin-bottom: 70px;
+    }
+
+    .circle {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      border: 4px solid #eee;
+      border-top-color: var(--orange);
+      border-right-color: var(--orange);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      margin: auto;
+      font-size: 12px;
+      padding: 15px;
+    }
+
+    .bar-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 70px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 1fr 60px;
+      gap: 16px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .bar {
+      grid-column: 1 / 3;
+      height: 4px;
+      background: #eee;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .projects-section {
+      background: var(--orange);
+      color: #111;
+    }
+
+    .projects-section .section-title {
+      color: #fff;
+    }
+
+    .project-grid {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #fff;
+      color: #111;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.16);
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+    }
+
+    .project-img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .project-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-date {
+      color: #aaa;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .project-body h3 {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .project-body p {
+      color: #555;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .read-more {
+      margin-top: auto;
+      text-align: right;
+      font-size: 12px;
       font-weight: bold;
     }
 
-    .btn:hover {
-      background: #0ea5e9;
+    .read-more:hover {
+      color: var(--orange);
     }
 
     footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
+      padding: 26px 8%;
+      font-size: 12px;
+      color: #777;
+      background: #fff;
     }
 
-    ul {
-      margin-left: 20px;
+    .top-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #222;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid,
+      .timeline-wrap,
+      .bar-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .circle-skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .circle-skills {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Julieta Rubis</h1>
-  <p>AI/ML Engineer | Healthcare AI | LLMs | RAG | Python | Hugging Face | Digital Health</p>
-  <p style="margin-top: 20px;">Building practical AI solutions for healthcare, compliance, and intelligent systems.</p>
-</header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#professional">Professional</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am an AI/ML graduate with experience in healthcare, digital health, LLM applications, RAG systems,
-      and AI-powered tools. My work focuses on practical AI solutions that support healthcare decision-making,
-      compliance, automation, and responsible AI use.
-    </p>
-    <p style="margin-top: 15px;">
-      I am especially interested in the intersection of Nursing, Healthcare AI, Agentic AI, and Digital Health innovation.
-    </p>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Healthcare Symptom Assistant</h3>
-      <p>
-        AI-powered healthcare assistant built with Gradio and Hugging Face. It provides general health guidance,
-        symptom categories, emergency warning detection, and chat history.
-      </p>
-      <div>
-        <span class="tag">Python</span>
-        <span class="tag">Gradio</span>
-        <span class="tag">Hugging Face</span>
-        <span class="tag">Qwen LLM</span>
-      </div>
-      <a class="btn" href="https://huggingface.co/spaces/julietarubis/health-chatbot" target="_blank">View Demo</a>
-    </div>
-
-    <div class="card">
-      <h3>EU AI Act Compliance Chatbot</h3>
-      <p>
-        LLM-powered compliance chatbot using RAG to support AI Act-related document search and question answering.
-      </p>
-      <div>
-        <span class="tag">LangChain</span>
-        <span class="tag">FAISS</span>
-        <span class="tag">RAG</span>
-        <span class="tag">AWS</span>
+  <header class="hero" id="top">
+    <div>
+      <img class="profile-photo" src="https://avatars.githubusercontent.com/u/143977243?v=4" alt="Julieta Rubis profile photo">
+      <h1><span class="line">—</span> Julieta Rubis <span class="line">—</span></h1>
+      <p>AI/ML Engineer / Healthcare AI Developer</p>
+      <div class="socials">
+        <a href="https://github.com/julietarubis" target="_blank">G</a>
+        <a href="https://www.linkedin.com/in/julietarubis" target="_blank">in</a>
+        <a href="https://huggingface.co/julietarubis" target="_blank">HF</a>
       </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>Healthcare Bias Detection Dashboard</h3>
-      <p>
-        Dashboard for analysing healthcare model fairness metrics and supporting bias detection in AI systems.
-      </p>
-      <div>
-        <span class="tag">Python</span>
-        <span class="tag">Flask</span>
-        <span class="tag">Dash</span>
-        <span class="tag">Fairness AI</span>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-menu">
+        <p><strong>What I am?</strong><span>AI/ML engineer</span></p>
+        <p><strong>Where I am?</strong><span>Kildare, Ireland</span></p>
+        <p><strong>How I am?</strong><span>Curious builder</span></p>
+        <p><strong>Who I am?</strong><span>Healthcare AI learner</span></p>
+        <p><strong>Why I am?</strong><span>To build useful AI for people</span></p>
+      </div>
+
+      <div class="about-content">
+        <h3>Hello!</h3>
+        <p>
+          <span class="highlight">I am Julieta Rubis, an AI/ML graduate and healthcare professional interested in practical AI systems.</span>
+          I build projects using Python, Hugging Face, Gradio, LLMs, RAG, and agentic AI ideas.
+        </p>
+        <p>
+          My work focuses on healthcare AI, digital health, responsible AI, compliance tools, and intelligent assistants.
+          I enjoy transforming real healthcare experience into useful AI applications.
+        </p>
+        <div class="mini-socials">
+          <a href="https://github.com/julietarubis" target="_blank">G</a>
+          <a href="https://www.linkedin.com/in/julietarubis" target="_blank">in</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>AI-Powered Anomaly Detection & Predictive Maintenance</h3>
-      <p>
-        MSc dissertation project using LSTM and Autoencoder models for industrial anomaly detection and predictive maintenance.
-      </p>
-      <div>
-        <span class="tag">LSTM</span>
-        <span class="tag">Autoencoder</span>
-        <span class="tag">Kafka</span>
-        <span class="tag">Spark</span>
+  <section class="orange-section" id="professional">
+    <h2 class="section-title">Professionally..</h2>
+
+    <div class="timeline-wrap">
+      <div class="timeline-block">
+        <span class="label">EDUCATION</span>
+        <div class="timeline-item">
+          <h3>MSc Artificial Intelligence</h3>
+          <p>University of Limerick, Ireland<br>AI, machine learning, LLMs and data systems</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Healthcare & Nursing Interest</h3>
+          <p>Digital health, patient care, and healthcare AI innovation</p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <span class="label">PROJECTS</span>
+        <div class="timeline-item">
+          <h3>Healthcare Symptom Assistant</h3>
+          <p>AI chatbot using Hugging Face, Gradio, Qwen LLM and emergency symptom detection.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>EU AI Act Compliance Chatbot</h3>
+          <p>RAG-based assistant for compliance document search and question answering.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Predictive Maintenance AI</h3>
+          <p>LSTM and Autoencoder models for anomaly detection and industrial forecasting.</p>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <h3>Automated Data Scraping Pipeline</h3>
-      <p>
-        Automated scraping solution using Selenium, BeautifulSoup, Scrapy, Flask backend, and MySQL storage.
-      </p>
-      <div>
-        <span class="tag">Selenium</span>
-        <span class="tag">BeautifulSoup</span>
-        <span class="tag">Scrapy</span>
-        <span class="tag">MySQL</span>
+    <div class="work">
+      <span class="label">WORK EXPERIENCE</span>
+      <div class="timeline-item">
+        <h3>AI/ML Developer Intern</h3>
+        <p>Orcawise, Dublin — LLMs, RAG, AI compliance and healthcare bias detection</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Healthcare Assistant</h3>
+        <p>Ireland — patient care experience supporting healthcare innovation interests</p>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="skills-section" id="skills">
+    <h2 class="section-title">Skills</h2>
 
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="card">
-    <span class="tag">Python</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Deep Learning</span>
-    <span class="tag">LLMs</span>
-    <span class="tag">RAG</span>
-    <span class="tag">LangChain</span>
-    <span class="tag">FAISS</span>
-    <span class="tag">Hugging Face</span>
-    <span class="tag">Gradio</span>
-    <span class="tag">Streamlit</span>
-    <span class="tag">Flask</span>
-    <span class="tag">AWS</span>
-    <span class="tag">Docker</span>
-    <span class="tag">SQL</span>
-    <span class="tag">Healthcare AI</span>
-  </div>
-</section>
+    <div class="circle-skills">
+      <div class="circle">Healthcare AI<br>Strong</div>
+      <div class="circle">LLMs / RAG<br>Strong</div>
+      <div class="circle">Python<br>Strong</div>
+      <div class="circle">Research & Projects<br>Strong</div>
+    </div>
 
-<section id="experience">
-  <h2>Experience</h2>
+    <div class="bar-grid">
+      <div class="bar-row"><span>Python</span><span>85%</span><div class="bar"><span style="width:85%"></span></div></div>
+      <div class="bar-row"><span>LLM Applications</span><span>80%</span><div class="bar"><span style="width:80%"></span></div></div>
+      <div class="bar-row"><span>Healthcare AI</span><span>85%</span><div class="bar"><span style="width:85%"></span></div></div>
+      <div class="bar-row"><span>RAG Systems</span><span>75%</span><div class="bar"><span style="width:75%"></span></div></div>
+      <div class="bar-row"><span>Gradio / Hugging Face</span><span>80%</span><div class="bar"><span style="width:80%"></span></div></div>
+      <div class="bar-row"><span>Web Development</span><span>70%</span><div class="bar"><span style="width:70%"></span></div></div>
+      <div class="bar-row"><span>Machine Learning</span><span>75%</span><div class="bar"><span style="width:75%"></span></div></div>
+      <div class="bar-row"><span>Communication</span><span>85%</span><div class="bar"><span style="width:85%"></span></div></div>
+    </div>
+  </section>
 
-  <div class="card">
-    <h3>AI/ML Developer Intern — Orcawise</h3>
-    <p><strong>Jun 2024 – Dec 2024 | Dublin, Ireland</strong></p>
-    <ul>
-      <li>Developed LLM-powered compliance chatbot using LangChain, FAISS, and AWS.</li>
-      <li>Worked on LLM optimization and AI compliance-related applications.</li>
-      <li>Contributed to healthcare bias detection and fairness evaluation systems.</li>
-    </ul>
-  </div>
+  <section class="projects-section" id="projects">
+    <h2 class="section-title">AI Projects</h2>
 
-  <div class="card">
-    <h3>Co-Founder & CTO — Techbottronix</h3>
-    <p><strong>Ireland</strong></p>
-    <ul>
-      <li>Built AI and web-based technology solutions.</li>
-      <li>Worked on healthcare AI, automation, and intelligent assistant concepts.</li>
-    </ul>
-  </div>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="project-body">
+          <div class="project-date">May 2026</div>
+          <h3>Healthcare Symptom Assistant</h3>
+          <p>AI-powered healthcare chatbot with symptom categories, emergency warning detection, chat history, and Hugging Face deployment.</p>
+          <a class="read-more" href="https://huggingface.co/spaces/julietarubis/health-chatbot" target="_blank">View Live Demo →</a>
+        </div>
+      </article>
 
-  <div class="card">
-    <h3>Healthcare Assistant</h3>
-    <p><strong>Ireland</strong></p>
-    <ul>
-      <li>Provided patient and resident care support in healthcare settings.</li>
-      <li>Developed strong interest in combining healthcare practice with AI innovation.</li>
-    </ul>
-  </div>
-</section>
+      <article class="project-card">
+        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="project-body">
+          <div class="project-date">2024</div>
+          <h3>EU AI Act Compliance Chatbot</h3>
+          <p>RAG-based chatbot concept for AI compliance document search, legal guidance support, and responsible AI workflows.</p>
+          <a class="read-more" href="https://github.com/julietarubis" target="_blank">View GitHub →</a>
+        </div>
+      </article>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a style="color:#38bdf8" href="mailto:julietarubis@gmail.com">julietarubis@gmail.com</a></p>
-    <p>GitHub: <a style="color:#38bdf8" href="https://github.com/julietarubis" target="_blank">github.com/julietarubis</a></p>
-    <p>LinkedIn: <a style="color:#38bdf8" href="https://www.linkedin.com/in/julietarubis" target="_blank">linkedin.com/in/julietarubis</a></p>
-    <p>Hugging Face: <a style="color:#38bdf8" href="https://huggingface.co/julietarubis" target="_blank">huggingface.co/julietarubis</a></p>
-  </div>
-</section>
+      <article class="project-card">
+        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="project-body">
+          <div class="project-date">2024</div>
+          <h3>Predictive Maintenance AI</h3>
+          <p>MSc project using LSTM and Autoencoder methods for anomaly detection and predictive maintenance systems.</p>
+          <a class="read-more" href="https://github.com/julietarubis" target="_blank">Read More →</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Julieta Rubis | AI & Healthcare Portfolio</p>
-</footer>
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="about" style="max-width:760px;">
+      <p>Email: <a href="mailto:julietarubis@gmail.com">julietarubis@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/julietarubis" target="_blank">github.com/julietarubis</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/julietarubis" target="_blank">linkedin.com/in/julietarubis</a></p>
+      <p>Hugging Face: <a href="https://huggingface.co/julietarubis" target="_blank">huggingface.co/julietarubis</a></p>
+    </div>
+  </section>
+
+  <footer>© 2026 Julieta Rubis</footer>
+  <a class="top-btn" href="#top">↑</a>
 
 </body>
 </html>
