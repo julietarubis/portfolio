@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julieta Rubis | AI & Healthcare Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Patrick+Hand&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --orange: #ff9100;
-      --orange-dark: #e67f00;
       --ink: #111827;
       --muted: #666;
-      --paper: #ffffff;
       --soft: #f7f7f7;
     }
 
@@ -28,9 +28,9 @@
     }
 
     body {
-      background: #ffffff;
+      background: white;
       color: var(--ink);
-      font-family: 'Roboto Mono', monospace;
+      font-family: "Roboto Mono", monospace;
       font-size: 14px;
       line-height: 1.7;
     }
@@ -40,18 +40,37 @@
       text-decoration: none;
     }
 
+    nav {
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
     .hero {
       min-height: 520px;
       background:
         linear-gradient(rgba(255, 145, 0, 0.88), rgba(255, 145, 0, 0.88)),
-        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: white;
       padding: 60px 20px;
     }
 
@@ -66,15 +85,14 @@
     }
 
     .hero h1 {
-      font-family: 'Patrick Hand', cursive;
+      font-family: "Patrick Hand", cursive;
       font-size: 56px;
       font-weight: 400;
-      letter-spacing: 1px;
       margin-bottom: 8px;
     }
 
     .hero .line {
-      font-family: 'Patrick Hand', cursive;
+      font-family: "Patrick Hand", cursive;
       font-size: 34px;
       margin: 0 8px;
     }
@@ -93,9 +111,9 @@
     }
 
     .socials a {
-      width: 32px;
-      height: 32px;
-      background: #fff;
+      width: 34px;
+      height: 34px;
+      background: white;
       color: var(--orange);
       display: grid;
       place-items: center;
@@ -108,26 +126,7 @@
     .socials a:hover {
       transform: translateY(-4px);
       background: #111827;
-      color: #fff;
-    }
-
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      padding: 16px 8%;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    nav a:hover {
-      color: var(--orange);
+      color: white;
     }
 
     section {
@@ -183,30 +182,13 @@
       color: #333;
     }
 
-    .mini-socials {
-      display: flex;
-      gap: 10px;
-      margin-top: 25px;
-    }
-
-    .mini-socials a {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      background: #1f2937;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 2px;
-    }
-
     .orange-section {
       background: var(--orange);
-      color: #fff;
+      color: white;
     }
 
     .orange-section .section-title {
-      color: #fff;
+      color: white;
     }
 
     .timeline-wrap {
@@ -217,13 +199,9 @@
       gap: 90px;
     }
 
-    .timeline-block {
-      position: relative;
-    }
-
     .label {
       display: inline-block;
-      background: #fff;
+      background: white;
       color: #111;
       padding: 5px 16px;
       letter-spacing: 5px;
@@ -247,13 +225,13 @@
     }
 
     .timeline-item::after {
-      content: '';
+      content: "";
       position: absolute;
       right: -10px;
       top: 6px;
       width: 18px;
       height: 18px;
-      background: #fff;
+      background: white;
       border-radius: 50%;
       box-shadow: 0 0 0 5px rgba(255,255,255,0.25);
     }
@@ -271,16 +249,12 @@
 
     .timeline-item p {
       font-size: 12px;
-      color: #fff;
+      color: white;
     }
 
     .work {
       max-width: 420px;
       margin: 70px auto 0;
-    }
-
-    .skills-section {
-      background: #fff;
     }
 
     .circle-skills {
@@ -342,7 +316,7 @@
     }
 
     .projects-section .section-title {
-      color: #fff;
+      color: white;
     }
 
     .project-grid {
@@ -354,9 +328,8 @@
     }
 
     .project-card {
-      background: #fff;
+      background: white;
       color: #111;
-      border-radius: 0;
       overflow: hidden;
       box-shadow: 0 20px 45px rgba(0,0,0,0.16);
       display: flex;
@@ -405,11 +378,21 @@
       color: var(--orange);
     }
 
+    .contact-box {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin-bottom: 14px;
+    }
+
     footer {
       padding: 26px 8%;
       font-size: 12px;
       color: #777;
-      background: #fff;
+      background: white;
     }
 
     .top-btn {
@@ -420,7 +403,7 @@
       height: 38px;
       border-radius: 50%;
       background: #222;
-      color: #fff;
+      color: white;
       display: grid;
       place-items: center;
       font-weight: bold;
@@ -459,6 +442,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -472,8 +456,15 @@
   <header class="hero" id="top">
     <div>
       <img class="profile-photo" src="https://avatars.githubusercontent.com/u/143977243?v=4" alt="Julieta Rubis profile photo">
-      <h1><span class="line">—</span> Julieta Rubis <span class="line">—</span></h1>
+
+      <h1>
+        <span class="line">—</span>
+        Julieta Rubis
+        <span class="line">—</span>
+      </h1>
+
       <p>AI/ML Engineer / Healthcare AI Developer</p>
+
       <div class="socials">
         <a href="https://github.com/julietarubis" target="_blank">G</a>
         <a href="https://www.linkedin.com/in/julietarubis" target="_blank">in</a>
@@ -484,6 +475,7 @@
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
+
     <div class="about-grid">
       <div class="about-menu">
         <p><strong>What I am?</strong><span>AI/ML engineer</span></p>
@@ -495,18 +487,18 @@
 
       <div class="about-content">
         <h3>Hello!</h3>
+
         <p>
-          <span class="highlight">I am Julieta Rubis, an AI/ML graduate and healthcare professional interested in practical AI systems.</span>
+          <span class="highlight">
+            I am Julieta Rubis, an AI/ML graduate and healthcare professional interested in practical AI systems.
+          </span>
           I build projects using Python, Hugging Face, Gradio, LLMs, RAG, and agentic AI ideas.
         </p>
+
         <p>
-          My work focuses on healthcare AI, digital health, responsible AI, compliance tools, and intelligent assistants.
-          I enjoy transforming real healthcare experience into useful AI applications.
+          My work focuses on healthcare AI, digital health, responsible AI, compliance tools,
+          predictive maintenance, and intelligent assistants.
         </p>
-        <div class="mini-socials">
-          <a href="https://github.com/julietarubis" target="_blank">G</a>
-          <a href="https://www.linkedin.com/in/julietarubis" target="_blank">in</a>
-        </div>
       </div>
     </div>
   </section>
@@ -515,41 +507,50 @@
     <h2 class="section-title">Professionally..</h2>
 
     <div class="timeline-wrap">
+
       <div class="timeline-block">
         <span class="label">EDUCATION</span>
+
         <div class="timeline-item">
           <h3>MSc Artificial Intelligence</h3>
-          <p>University of Limerick, Ireland<br>AI, machine learning, LLMs and data systems</p>
+          <p>University of Limerick, Ireland<br>AI, machine learning, LLMs, predictive maintenance and data systems</p>
         </div>
+
         <div class="timeline-item">
           <h3>Healthcare & Nursing Interest</h3>
-          <p>Digital health, patient care, and healthcare AI innovation</p>
+          <p>Digital health, patient care, healthcare AI innovation and responsible AI</p>
         </div>
       </div>
 
       <div class="timeline-block">
-        <span class="label">PROJECTS</span>
+        <span class="label">RESEARCH</span>
+
+        <div class="timeline-item">
+          <h3>Wind Turbine Anomaly Detection</h3>
+          <p>MSc dissertation using SCADA data, LSTM-AE, BiLSTM, DAE, Kafka, Spark and Streamlit.</p>
+        </div>
+
         <div class="timeline-item">
           <h3>Healthcare Symptom Assistant</h3>
           <p>AI chatbot using Hugging Face, Gradio, Qwen LLM and emergency symptom detection.</p>
         </div>
+
         <div class="timeline-item">
           <h3>EU AI Act Compliance Chatbot</h3>
           <p>RAG-based assistant for compliance document search and question answering.</p>
         </div>
-        <div class="timeline-item">
-          <h3>Predictive Maintenance AI</h3>
-          <p>LSTM and Autoencoder models for anomaly detection and industrial forecasting.</p>
-        </div>
       </div>
+
     </div>
 
     <div class="work">
       <span class="label">WORK EXPERIENCE</span>
+
       <div class="timeline-item">
         <h3>AI/ML Developer Intern</h3>
         <p>Orcawise, Dublin — LLMs, RAG, AI compliance and healthcare bias detection</p>
       </div>
+
       <div class="timeline-item">
         <h3>Healthcare Assistant</h3>
         <p>Ireland — patient care experience supporting healthcare innovation interests</p>
@@ -557,14 +558,14 @@
     </div>
   </section>
 
-  <section class="skills-section" id="skills">
+  <section id="skills">
     <h2 class="section-title">Skills</h2>
 
     <div class="circle-skills">
       <div class="circle">Healthcare AI<br>Strong</div>
       <div class="circle">LLMs / RAG<br>Strong</div>
       <div class="circle">Python<br>Strong</div>
-      <div class="circle">Research & Projects<br>Strong</div>
+      <div class="circle">Research Projects<br>Strong</div>
     </div>
 
     <div class="bar-grid">
@@ -573,7 +574,7 @@
       <div class="bar-row"><span>Healthcare AI</span><span>85%</span><div class="bar"><span style="width:85%"></span></div></div>
       <div class="bar-row"><span>RAG Systems</span><span>75%</span><div class="bar"><span style="width:75%"></span></div></div>
       <div class="bar-row"><span>Gradio / Hugging Face</span><span>80%</span><div class="bar"><span style="width:80%"></span></div></div>
-      <div class="bar-row"><span>Web Development</span><span>70%</span><div class="bar"><span style="width:70%"></span></div></div>
+      <div class="bar-row"><span>Kafka / Spark</span><span>70%</span><div class="bar"><span style="width:70%"></span></div></div>
       <div class="bar-row"><span>Machine Learning</span><span>75%</span><div class="bar"><span style="width:75%"></span></div></div>
       <div class="bar-row"><span>Communication</span><span>85%</span><div class="bar"><span style="width:85%"></span></div></div>
     </div>
@@ -583,41 +584,73 @@
     <h2 class="section-title">AI Projects</h2>
 
     <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80')"></div>
+
+        <div class="project-body">
+          <div class="project-date">MSc Dissertation • 2025</div>
+
+          <h3>AI-powered Wind Turbine Anomaly Detection</h3>
+
+          <p>
+            Predictive maintenance system using SCADA data, LSTM Autoencoder,
+            BiLSTM, Deep Autoencoder, SVR adaptive thresholding,
+            Kafka, Spark Streaming and Streamlit dashboard.
+          </p>
+
+          <a class="read-more" href="https://github.com/julietarubis" target="_blank">
+            View Project →
+          </a>
+        </div>
+      </article>
+
       <article class="project-card">
         <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80')"></div>
+
         <div class="project-body">
           <div class="project-date">May 2026</div>
+
           <h3>Healthcare Symptom Assistant</h3>
-          <p>AI-powered healthcare chatbot with symptom categories, emergency warning detection, chat history, and Hugging Face deployment.</p>
-          <a class="read-more" href="https://huggingface.co/spaces/julietarubis/health-chatbot" target="_blank">View Live Demo →</a>
+
+          <p>
+            AI-powered healthcare chatbot with symptom categories,
+            emergency warning detection, chat history,
+            and Hugging Face deployment.
+          </p>
+
+          <a class="read-more" href="https://huggingface.co/spaces/julietarubis/health-chatbot" target="_blank">
+            View Live Demo →
+          </a>
         </div>
       </article>
 
       <article class="project-card">
         <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80')"></div>
+
         <div class="project-body">
           <div class="project-date">2024</div>
+
           <h3>EU AI Act Compliance Chatbot</h3>
-          <p>RAG-based chatbot concept for AI compliance document search, legal guidance support, and responsible AI workflows.</p>
-          <a class="read-more" href="https://github.com/julietarubis" target="_blank">View GitHub →</a>
+
+          <p>
+            RAG-based chatbot concept for AI compliance document search,
+            legal guidance support, and responsible AI workflows.
+          </p>
+
+          <a class="read-more" href="https://github.com/julietarubis" target="_blank">
+            View GitHub →
+          </a>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=900&q=80')"></div>
-        <div class="project-body">
-          <div class="project-date">2024</div>
-          <h3>Predictive Maintenance AI</h3>
-          <p>MSc project using LSTM and Autoencoder methods for anomaly detection and predictive maintenance systems.</p>
-          <a class="read-more" href="https://github.com/julietarubis" target="_blank">Read More →</a>
-        </div>
-      </article>
     </div>
   </section>
 
   <section id="contact">
     <h2 class="section-title">Contact</h2>
-    <div class="about" style="max-width:760px;">
+
+    <div class="contact-box">
       <p>Email: <a href="mailto:julietarubis@gmail.com">julietarubis@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/julietarubis" target="_blank">github.com/julietarubis</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/julietarubis" target="_blank">linkedin.com/in/julietarubis</a></p>
@@ -625,7 +658,10 @@
     </div>
   </section>
 
-  <footer>© 2026 Julieta Rubis</footer>
+  <footer>
+    © 2026 Julieta Rubis
+  </footer>
+
   <a class="top-btn" href="#top">↑</a>
 
 </body>
